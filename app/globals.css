@@ -1,2 +1,70 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
 
+/*  Theme Variables */
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #9ca3af;
+  --border: #e5e7eb;
+  --grid-line: rgba(0, 0, 0, 0.045);
+  --hover: #f3f4f6;
+}
+
+[data-theme='dark'] {
+  --bg: #0a0a0a;
+  --fg: #f0f0f0;
+  --muted: #555555;
+  --border: #1e1e1e;
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --hover: #141414;
+}
+
+/* Reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  Base */
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+/*   grid texture */
+.grid-bg {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/*   theme ripple overlay */
+.theme-ripple {
+  position: fixed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
