@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap");
 
 /*  Theme Variables */
 :root {
   --bg: #ffffff;
   --fg: #0a0a0a;
-  --muted: #9ca3af;
+  --muted: #6b7280;
   --border: #e5e7eb;
   --grid-line: rgba(0, 0, 0, 0.045);
   --hover: #f3f4f6;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --bg: #0a0a0a;
   --fg: #f0f0f0;
-  --muted: #555555;
+  --muted: #a1a1aa;
   --border: #1e1e1e;
   --grid-line: rgba(255, 255, 255, 0.03);
   --hover: #141414;
@@ -33,8 +33,10 @@ html,
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: 'DM Sans', sans-serif;
-  transition: background 0.4s ease, color 0.4s ease;
+  font-family: "DM Sans", sans-serif;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
 }
 
 a {
@@ -68,3 +70,4 @@ button {
   height: 0;
   opacity: 0;
 }
+
