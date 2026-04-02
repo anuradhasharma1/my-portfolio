@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { SiPeerlist } from "react-icons/si";
 
 const ROLES = [
     'full stack developer',
@@ -13,11 +16,11 @@ const ROLES = [
 ]
 
 const SOCIALS = [
-    { label: 'GitHub', href: 'https://github.com/anuradhasharma1' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anuradha-sharmaa1/' },
-    { label: 'Peerlist', href: 'https://peerlist.io/anuradha71440' },
-    { label: 'Medium', href: 'https://medium.com/@anuradhasharma1' },
-    { label: 'Mail', href: 'mailto:anuradhasharma71440@gmail.com' },
+    { label: 'GitHub', href: 'https://github.com/anuradhasharma1', icon: FaGithub },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anuradha-sharmaa1/', icon: FaLinkedin },
+    { label: 'Peerlist', href: 'https://peerlist.io/anuradha71440', icon: SiPeerlist },
+    { label: 'Medium', href: 'https://medium.com/@anuradhasharma1', icon: FaMedium },
+    { label: 'Mail', href: 'mailto:anuradhasharma71440@gmail.com', icon: MdEmail },
 ]
 
 const AVATAR_COLORS = [
@@ -272,7 +275,7 @@ export default function Intro() {
             }}> Connect</p>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '7px' }}>
-                {SOCIALS.map(({ label, href }) => (
+                {SOCIALS.map(({ label, href, icon: Icon }) => (
                     <a
                         key={label}
                         href={href}
@@ -300,6 +303,7 @@ export default function Intro() {
                             e.currentTarget.style.background = 'transparent'
                         }}
                     >
+                        {Icon && <Icon size={12} />}
                         {label}
                         <span style={{ opacity: 0.8, fontSize: '9px' }}>↗</span>
                     </a>
