@@ -124,12 +124,14 @@ export default function Intro() {
                         src="/img1.png"
                         alt="avatar1"
                         fill
+                        sizes="117px"
                         style={{
                             objectFit: 'cover',
                             position: 'absolute',
                             transition: 'all 0.4s ease',
                             opacity: avatarToggle ? 0 : 1,
                             transform: avatarToggle ? 'scale(0.8) rotate(10deg)' : 'scale(1)',
+
                         }}
                     />
 
@@ -138,12 +140,14 @@ export default function Intro() {
                         src="/img2.png"
                         alt="avatar2"
                         fill
+                        sizes="117px"
                         style={{
                             objectFit: 'cover',
                             position: 'absolute',
                             transition: 'all 0.4s ease',
                             opacity: avatarToggle ? 1 : 0,
                             transform: avatarToggle ? 'scale(1)' : 'scale(0.8) rotate(-10deg)',
+
                         }}
                     />
 
