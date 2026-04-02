@@ -106,9 +106,9 @@ export default function Intro() {
                         alignItems: 'center',
                         gap: '16px',
                         flexShrink: 0,
-                        width: '56px',
-                        height: '56px',
-                        borderRadius: '50%',
+                        width: '117px',
+                        height: '117px',
+                        borderRadius: '8px',
                         border: `1.5px solid ${color.ring}`,
                         background: color.bg,
                         overflow: 'hidden',
@@ -154,9 +154,7 @@ export default function Intro() {
                             position: 'absolute',
                             inset: 0,
                             borderRadius: '50%',
-                            boxShadow: avatarToggle
-                                ? '0 0 20px #60a5fa'
-                                : '0 0 12px rgba(255,255,255,0.2)',
+                            boxShadow: 'none',
                             transition: 'all 0.4s ease',
                             pointerEvents: 'none',
                         }}
@@ -164,7 +162,7 @@ export default function Intro() {
                 </div>
 
                 {/* Name */}
-                <div style={{ paddingTop: '2px' }}>
+                <div style={{ paddingTop: '0px' }}>
                     <p style={{
                         fontFamily: 'DM Mono, monospace',
                         fontSize: '11px',
