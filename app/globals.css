@@ -83,6 +83,7 @@ button {
   padding: 8px 16px;
   gap: 10px;
   flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-copy p {

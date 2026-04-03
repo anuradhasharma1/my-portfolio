@@ -97,7 +97,7 @@ export default function ProjectCard({ project }) {
             <div style={{
                 display: 'flex',
                 gap: '10px',
-                fontSize: '10px'
+                fontSize: '15px'
             }}>
                 <a href={project.live} target="_blank">live ↗</a>
                 <a href={project.github} target="_blank">code ↗</a>
