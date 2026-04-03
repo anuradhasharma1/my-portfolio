@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
