@@ -17,7 +17,12 @@ export default function ProjectsPage() {
         }}>
           Projects
         </p>
-       
+        <div style={{
+          height: '1px',
+          background: 'var(--border)',
+          marginBottom: '16px'
+        }} />
+
         <p style={{
           fontSize: '15px',
           color: 'var(--muted)',
@@ -26,7 +31,7 @@ export default function ProjectsPage() {
           lineHeight: 1.6,
           whiteSpace: 'nowrap'
         }}>
-         Built from curiosity and a drive to learn — continuously improving and turning ideas into practical, real-world applications.
+          Built from curiosity and a drive to learn — continuously improving and turning ideas into practical, real-world applications.
         </p>
 
         {/* GRID */}
