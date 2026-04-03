@@ -53,7 +53,6 @@ function getMonthLabels(weeks) {
 
 export default function GithubActivity() {
     const [weeks, setWeeks] = useState([])
-    const [todayTime, setTodayTime] = useState('')
     const [total, setTotal] = useState(0)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -90,14 +89,7 @@ export default function GithubActivity() {
             })
     }, [])
 
-    useEffect(() => {
-        fetch('https://wakatime.com/api/v1/users/current/stats/today?api_key=YOUR_API_KEY')
-            .then(r => r.json())
-            .then(data => {
-                setTodayTime(data.data.human_readable_total || '0 mins')
-            })
-            .catch(() => setTodayTime('—'))
-    }, [])
+    
 
     const getColor = (count) => {
         const base = isDark ? '255,255,255' : '0,0,0'

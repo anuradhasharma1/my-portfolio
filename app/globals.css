@@ -71,3 +71,132 @@ button {
   opacity: 0;
 }
 
+
+.footer-wrap {
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-copy p {
+  font-size: 9px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  line-height: 1;
+}
+
+
+.cat-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.cat-area svg {
+  display: block;
+  width: 58px;
+  height: 58px;
+  transition: transform 0.25s ease;
+}
+.cat-area:hover svg {
+  transform: scale(1.08);
+}
+
+[data-theme="light"] .cat-area svg {
+  filter:
+    drop-shadow(1px 0 0 black)
+    drop-shadow(-1px 0 0 black)
+    drop-shadow(0 1px 0 black)
+    drop-shadow(0 -1px 0 black);
+}
+
+[data-theme="dark"] .cat-area svg {
+  filter: none;
+}
+
+.cat-bubble {
+  position: absolute;
+  bottom: 52px;
+  left: -8px;
+  font-size: 9px;
+  background: var(--hover);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  opacity: 0;
+  transform: translateY(6px) scale(0.9);
+  transition: all 0.2s ease;
+  font-family: 'DM Mono', monospace;
+}
+.cat-area:hover .cat-bubble {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#cat-tail {
+  animation: tail-sleep 2.5s infinite ease-in-out;
+  transform-origin: bottom left;
+}
+
+@keyframes tail-sleep {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg); }
+}
+
+.cat-area:hover #cat-tail {
+  animation: tail-awake 0.6s infinite ease-in-out;
+}
+
+@keyframes tail-awake {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(18deg); }
+}
+
+
+#eye-sleep { opacity: 1; }
+#eye-awake { opacity: 0; }
+
+.cat-area:hover #eye-sleep { opacity: 0; }
+
+.cat-area:hover #eye-awake {
+  opacity: 1;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .footer-copy p {
+    font-size: 8px;
+  }
+
+  .cat-area svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .cat-bubble {
+    left: 50%;
+    transform: translate(-50%, 6px) scale(0.9);
+  }
+
+  .cat-area:hover .cat-bubble {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
