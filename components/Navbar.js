@@ -207,12 +207,7 @@ export default function Navbar() {
 
                     {/* ── Actions ── */}
                     <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                        <button style={actionBtnStyle()} aria-label="Open command palette">
-                            search
-                            <span style={{ padding: '2px 5px', border: '1px solid var(--border)', borderRadius: '3px', fontSize: '9px', background: 'var(--hover)', transition: 'border-color 0.4s' }}>
-                                ⌘K
-                            </span>
-                        </button>
+                        
 
                         {/*theme toggler button*/}
                         <button
