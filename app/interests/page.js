@@ -82,31 +82,26 @@ export default function InterestsPage() {
     <>
       <GridStrip />
 
-      <main style={{ padding: '48px 28px 80px', maxWidth: '680px' }}>
+      <main style={{ padding: '40px 20px ', width: '100%' }}>
 
         <h1 style={{ ...mono(25), marginBottom: '40px' }}>Interests</h1>
 
         <Divider />
 
-        {/* BOOKS */}
-        <section style={{ marginBottom: '48px' }}>
-          <SectionLabel label="Books I love.." index="01" />
+        <div style={container}>
 
-          <div style={grid}>
+          {/* LEFT — BOOKS */}
+          <div style={column}>
+            <SectionLabel label="Books I love.." index="01" />
+
             {BOOKS.map((book, i) => (
               <div key={i} className="card" style={card}>
 
                 <div style={imgWrapper}>
-                  <Image
-                    src={book.cover}
-                    alt={book.title}
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
+                  <Image src={book.cover} alt={book.title} fill style={{ objectFit: "contain" }} />
                 </div>
 
-                <div style={{ padding: '12px' }}>
-                  <p style={tag}>BOOK</p>
+                <div>
                   <p style={title}>{book.title}</p>
                   <p style={sub}>— {book.author}</p>
                   <p style={desc}>{book.note}</p>
@@ -115,29 +110,22 @@ export default function InterestsPage() {
               </div>
             ))}
           </div>
-        </section>
 
-        <Divider />
+          {/* DIVIDER */}
+          <div style={dividerVertical}></div>
 
-        {/* SHOWS */}
-        <section style={{ marginBottom: '48px' }}>
-          <SectionLabel label="All time fav Shows" index="02" />
+          {/* RIGHT — SHOWS */}
+          <div style={column}>
+            <SectionLabel label="All Time Fav Shows" index="02" />
 
-          <div style={grid}>
             {SHOWS.map((show, i) => (
               <div key={i} className="card" style={card}>
 
                 <div style={imgWrapper}>
-                  <Image
-                    src={show.cover}
-                    alt={show.title}
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
+                  <Image src={show.cover} alt={show.title} fill style={{ objectFit: "contain" }} />
                 </div>
 
-                <div style={{ padding: '12px' }}>
-                  <p style={tag}>SHOW</p>
+                <div>
                   <p style={title}>{show.title}</p>
                   <p style={desc}>{show.note}</p>
                 </div>
@@ -145,7 +133,8 @@ export default function InterestsPage() {
               </div>
             ))}
           </div>
-        </section>
+
+        </div>
 
       </main>
     </>
@@ -156,21 +145,47 @@ export default function InterestsPage() {
 
 const grid = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
+  gridTemplateColumns: '1fr',
   gap: '20px',
 }
 
+const container = {
+  display: 'grid',
+  gridTemplateColumns: '1fr auto 1fr',
+  gap: '16px',
+  alignItems: 'start',
+  width: '100%',
+}
+
+const column = {
+  padding: '20px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '16px',
+}
+
+const dividerVertical = {
+  width: '1px',
+  background: 'var(--border)',
+  margin: '0 10px'
+}
+
 const card = {
+  display: 'flex',
+  gap: '16px',
   border: '1px solid var(--border)',
   borderRadius: '6px',
   overflow: 'hidden',
-  cursor: 'pointer',
+  padding: '12px',
 }
 
 const imgWrapper = {
   position: 'relative',
   width: '100%',
-  height: '160px',
+  height: '140px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 }
 
 const tag = {
