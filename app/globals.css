@@ -71,7 +71,6 @@ button {
   opacity: 0;
 }
 
-
 .footer-wrap {
   border-top: 1px solid var(--border);
 }
@@ -89,10 +88,9 @@ button {
 .footer-copy p {
   font-size: 9px;
   color: var(--muted);
-  font-family: 'DM Mono', monospace;
+  font-family: "DM Mono", monospace;
   line-height: 1;
 }
-
 
 .cat-area {
   position: relative;
@@ -111,11 +109,8 @@ button {
 }
 
 [data-theme="light"] .cat-area svg {
-  filter:
-    drop-shadow(1px 0 0 black)
-    drop-shadow(-1px 0 0 black)
-    drop-shadow(0 1px 0 black)
-    drop-shadow(0 -1px 0 black);
+  filter: drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black)
+    drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black);
 }
 
 [data-theme="dark"] .cat-area svg {
@@ -133,7 +128,7 @@ button {
   opacity: 0;
   transform: translateY(6px) scale(0.9);
   transition: all 0.2s ease;
-  font-family: 'DM Mono', monospace;
+  font-family: "DM Mono", monospace;
 }
 .cat-area:hover .cat-bubble {
   opacity: 1;
@@ -146,8 +141,13 @@ button {
 }
 
 @keyframes tail-sleep {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(6deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
 }
 
 .cat-area:hover #cat-tail {
@@ -155,15 +155,25 @@ button {
 }
 
 @keyframes tail-awake {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(18deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(18deg);
+  }
 }
 
+#eye-sleep {
+  opacity: 1;
+}
+#eye-awake {
+  opacity: 0;
+}
 
-#eye-sleep { opacity: 1; }
-#eye-awake { opacity: 0; }
-
-.cat-area:hover #eye-sleep { opacity: 0; }
+.cat-area:hover #eye-sleep {
+  opacity: 0;
+}
 
 .cat-area:hover #eye-awake {
   opacity: 1;
@@ -171,8 +181,14 @@ button {
 }
 
 @keyframes blink {
-  0%, 90%, 100% { opacity: 1; }
-  95% { opacity: 0; }
+  0%,
+  90%,
+  100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -200,4 +216,15 @@ button {
   .cat-area:hover .cat-bubble {
     transform: translate(-50%, 0) scale(1);
   }
+}
+
+.card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
