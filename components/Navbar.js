@@ -207,7 +207,7 @@ export default function Navbar() {
 
                     {/* ── Actions ── */}
                     <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                        
+
 
                         {/*theme toggler button*/}
                         <button
@@ -232,25 +232,21 @@ export default function Navbar() {
                                     opacity: isDark ? 0 : 1,
                                     transform: isDark ? 'rotate(90deg) scale(0.4)' : 'rotate(0deg) scale(1)',
                                     transition: 'opacity 0.3s ease, transform 0.4s ease',
-                                }}><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="1.8"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round">
+                                }}>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round">
 
-                                        <circle cx="12" cy="12" r="4" />
-                                        <line x1="12" y1="1" x2="12" y2="3" />
-                                        <line x1="12" y1="21" x2="12" y2="23" />
-                                        <line x1="4.2" y1="4.2" x2="5.6" y2="5.6" />
-                                        <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
-                                        <line x1="1" y1="12" x2="3" y2="12" />
-                                        <line x1="21" y1="12" x2="23" y2="12" />
-                                        <line x1="4.2" y1="19.8" x2="5.6" y2="18.4" />
-                                        <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
-                                    </svg></span>
+                                        <path d="M21 12.8A9 9 0 1 1 11.2 3 
+           7 7 0 0 0 21 12.8z"/>
+                                    </svg>
+
+                                </span>
                                 {/* moon — visible in dark mode */}
                                 <span style={{
                                     position: 'absolute',
@@ -272,9 +268,21 @@ export default function Navbar() {
                                         strokeLinecap="round"
                                         strokeLinejoin="round">
 
-                                        <path d="M21 12.8A9 9 0 1 1 11.2 3 
-           7 7 0 0 0 21 12.8z"/>
-                                    </svg></span>
+                                        <circle cx="12" cy="12" r="4" />
+                                        <line x1="12" y1="1" x2="12" y2="3" />
+                                        <line x1="12" y1="21" x2="12" y2="23" />
+                                        <line x1="4.2" y1="4.2" x2="5.6" y2="5.6" />
+                                        <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
+                                        <line x1="1" y1="12" x2="3" y2="12" />
+                                        <line x1="21" y1="12" x2="23" y2="12" />
+                                        <line x1="4.2" y1="19.8" x2="5.6" y2="18.4" />
+                                        <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
+                                    </svg>
+
+
+
+
+                                </span>
                             </div>
                         </button>
                     </div>

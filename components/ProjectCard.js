@@ -74,8 +74,6 @@ export default function ProjectCard({ project }) {
                     ))}
                 </div>
             )}
-
-
             <div style={{
                 display: 'flex',
                 gap: '6px',
