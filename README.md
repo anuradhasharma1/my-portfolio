@@ -1,6 +1,6 @@
 # Anuradha Sharma — Portfolio
 
-> **Live →** [anuradhasharma.vercel.app](https://anuradhasharma.vercel.app)
+> **Live →** [anuradhasharma.vercel.app](https://my-portfolio-five-smoky-45.vercel.app/projects)
 
 Personal portfolio built from scratch . Every UI element handwritten in Next.js.
 
