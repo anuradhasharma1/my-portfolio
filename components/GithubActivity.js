@@ -147,9 +147,10 @@ export default function GithubActivity() {
                     border: '1px solid var(--border)',
                     padding: '16px 16px 12px',
                     overflowX: 'auto',
+                    overflowY: 'hidden',
                     transition: 'border-color 0.4s',
                     position: 'relative',
-                    display: 'inline-block',
+                    display: 'block',
                     minWidth: '100%',
                 }}
             >
