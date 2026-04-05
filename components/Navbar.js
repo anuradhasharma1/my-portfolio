@@ -144,7 +144,7 @@ export default function Navbar() {
                         <LogoSVG />
                     </Link>
                     <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                        <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '9px', color: 'rgba(0,0,0,0.09)', padding: '0 10px', userSelect: 'none', pointerEvents: 'none' }}>01</span>
+                        
 
                         {NAV_LINKS.map(({ label, href }) => (
                             <Link key={label} href={href} style={linkStyle()}>
