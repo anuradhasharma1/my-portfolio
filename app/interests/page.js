@@ -1,5 +1,7 @@
+
 import GridStrip from "@/components/GridStrip"
 import Image from "next/image"
+
 
 //data
 const BOOKS = [
@@ -88,16 +90,16 @@ export default function InterestsPage() {
 
         <Divider />
 
-        <div style={container}>
+        <div style={container} className="interest-container">
 
           {/* LEFT — BOOKS */}
-          <div style={column}>
+          <div style={column} className="interest-column">
             <SectionLabel label="Books I love.." index="01" />
 
             {BOOKS.map((book, i) => (
               <div key={i} className="card" style={card}>
 
-                <div style={imgWrapper}>
+                <div style={imgWrapper} className="interest-img">
                   <Image src={book.cover} alt={book.title} fill style={{ objectFit: "contain" }} />
                 </div>
 
@@ -112,7 +114,7 @@ export default function InterestsPage() {
           </div>
 
           {/* DIVIDER */}
-          <div style={dividerVertical}></div>
+          <div style={dividerVertical} className="interest-divider"></div>
 
           {/* RIGHT — SHOWS */}
           <div style={column}>
@@ -149,12 +151,6 @@ const grid = {
   gap: '20px',
 }
 
-const container = {
-  display: 'grid',
-  gridTemplateColumns: '1fr auto 1fr',
-  gap: '16px',
-  
-}
 
 const column = {
   padding: '20px',
@@ -180,7 +176,7 @@ const card = {
 
 const imgWrapper = {
   position: 'relative',
-  width: '80px',   
+  width: '80px',
   height: '100px',
   flexShrink: 0,
 }
@@ -206,6 +202,14 @@ const desc = {
   opacity: 0.6,
 }
 
+const container = {
+  display: 'grid',
+  gridTemplateColumns: '1fr auto 1fr',
+  gap: '16px',
+}
+
+
+
 function SectionLabel({ label, index }) {
   return (
     <div style={{ display: 'flex', gap: '10px', marginBottom: '16px' }}>
@@ -222,10 +226,7 @@ function Divider() {
         height: '1px',
         background: 'var(--border)',
         margin: '0 0 48px',
-        width: '100vw',
-        position: 'relative',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        width: '100%',
       }}
     />
   )

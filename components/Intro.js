@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -348,6 +348,10 @@ export default function Intro() {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
+      @keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(74,222,128,0.2); }
+  50%       { box-shadow: 0 0 0 5px rgba(74,222,128,0); }
+}
   `}</style>
         </section >
 

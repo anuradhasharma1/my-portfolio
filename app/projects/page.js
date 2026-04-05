@@ -29,9 +29,9 @@ export default function ProjectsPage() {
           marginBottom: '18px',
           maxWidth: '500px',
           lineHeight: 1.6,
-          whiteSpace: 'nowrap'
+          
         }}>
-          Built from curiosity and a drive to learn — continuously improving and turning ideas into practical, real-world applications.
+          Built from curosity  and a drive to learn — continuously improving and turning ideas into practical, real-world applications.
         </p>
 
         {/* GRID */}

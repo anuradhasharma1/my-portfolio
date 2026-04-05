@@ -51,6 +51,7 @@ export default function Navbar() {
     const rippleRef = useRef(null)
     const themeBtnRef = useRef(null)
 
+   
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 10)
         window.addEventListener('scroll', onScroll)
