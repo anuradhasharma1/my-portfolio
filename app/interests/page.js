@@ -94,7 +94,7 @@ export default function InterestsPage() {
 
           {/* LEFT — BOOKS */}
           <div style={column} className="interest-column">
-            <SectionLabel label="Books I love.." index="01" />
+            <SectionLabel label="Books I love.."  />
 
             {BOOKS.map((book, i) => (
               <div key={i} className="card" style={card}>
@@ -118,7 +118,7 @@ export default function InterestsPage() {
 
           {/* RIGHT — SHOWS */}
           <div style={column}>
-            <SectionLabel label="All Time Fav Shows" index="02" />
+            <SectionLabel label="All Time Fav Shows"  />
 
             {SHOWS.map((show, i) => (
               <div key={i} className="card" style={card}>
