@@ -1,6 +1,22 @@
 export const Projects = [
 
     {
+
+        title: 'DevKeep',
+        desc: 'Full-stack code snippet manager to store, organize, and retrieve reusable code efficiently.',
+        points: [
+            'Implemented authentication using NextAuth.js (JWT + Google OAuth)',
+            'Built full CRUD functionality for managing code snippets',
+            'Added tag-based filtering and real-time search',
+            'Clean and responsive UI for better developer experience',
+        ],
+        tech: ['Next.js', 'MongoDB', 'Tailwind', 'NextAuth'],
+        live: 'https://devkeep-two.vercel.app/',
+        github: 'https://github.com/anuradhasharma1/devkeep',
+        featured: true,
+        image: '/devkeep.png',
+    },
+    {
         title: 'Orbit Weight Scale',
         desc: 'Interactive web app that calculates your weight on different planets using real physics-based formulas.',
         points: [
